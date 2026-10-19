@@ -50,10 +50,11 @@ export OPENCODE_API_KEY=your-key        # OPENCODE_GO_API_KEY also works
 python run.py
 ```
 
-Or put the key in a local, gitignored `.env` file:
+Or put the key in a local, gitignored `.env` file (start from `.env.example`):
 
-```text
-OPENCODE_API_KEY=your-key
+```bash
+cp .env.example .env
+# then edit .env and set OPENCODE_API_KEY
 ```
 
 Behavior:
