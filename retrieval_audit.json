@@ -1,0 +1,280 @@
+[
+  {
+    "retrieval_id": "RET-M1-76ef2eac",
+    "message_id": "M1",
+    "query": "I submitted my ID yesterday. Can you confirm I will be verified today?",
+    "query_tokens": [
+      "submitted",
+      "id",
+      "yesterday",
+      "confirm",
+      "verified",
+      "verification",
+      "verify",
+      "today"
+    ],
+    "top_k": 3,
+    "returned_count": 3,
+    "weak_support": false,
+    "top_score": 5.290697,
+    "min_relevance_score": 0.05,
+    "index_fingerprint": "5baa0ff48fad",
+    "results": [
+      {
+        "rank": 1,
+        "chunk_id": "POL-002-c00",
+        "doc_id": "POL-002",
+        "title": "Verification Review Policy",
+        "chunk_index": 0,
+        "content_hash": "54a8559f698cafb772a6f22ed6cd22dc7b21a4beac391adcd409b7a020ab2586",
+        "score": 5.290697,
+        "score_normalized": 1.0,
+        "matched_terms": [
+          "verification",
+          "verified",
+          "verify"
+        ],
+        "text": "Identity verification reviews are typically completed within 1 to 3 business days. Support agents must not guarantee approval. If documents are rejected, the user should be asked to submit a clearer or valid document based on the rejection reason."
+      },
+      {
+        "rank": 2,
+        "chunk_id": "POL-001-c00",
+        "doc_id": "POL-001",
+        "title": "Password Reset Policy",
+        "chunk_index": 0,
+        "content_hash": "df8b8c8bf9c806feb43a6a313a0109c6cb49ffd96eb30d09a6338fcaa6475552",
+        "score": 1.138302,
+        "score_normalized": 0.215152,
+        "matched_terms": [
+          "confirm"
+        ],
+        "text": "Users can reset their password from the login page using the Forgot Password link. Support agents cannot manually view or set customer passwords. If the user does not receive the reset email, they should check spam and confirm the registered email address."
+      },
+      {
+        "rank": 3,
+        "chunk_id": "POL-003-c00",
+        "doc_id": "POL-003",
+        "title": "Refund Policy",
+        "chunk_index": 0,
+        "content_hash": "83b2069b6315ed3bfdf88785db950a2636f48e79251adb7744de2fc3bd81687b",
+        "score": 0.0,
+        "score_normalized": 0.0,
+        "matched_terms": [],
+        "text": "Refund eligibility depends on payment method, account status, and internal review. Support agents must not promise that a refund will be issued. They may explain that the case will be reviewed and that users may be asked for additional information."
+      }
+    ],
+    "created_at": "2026-10-19T10:48:34.814+00:00"
+  },
+  {
+    "retrieval_id": "RET-M2-4b20ca09",
+    "message_id": "M2",
+    "query": "Please refund my deposit right now. I need confirmation that the money is coming back.",
+    "query_tokens": [
+      "refund",
+      "reimbursement",
+      "chargeback",
+      "deposit",
+      "right",
+      "need",
+      "confirmation",
+      "money",
+      "coming",
+      "back"
+    ],
+    "top_k": 3,
+    "returned_count": 3,
+    "weak_support": false,
+    "top_score": 6.260659,
+    "min_relevance_score": 0.05,
+    "index_fingerprint": "5baa0ff48fad",
+    "results": [
+      {
+        "rank": 1,
+        "chunk_id": "POL-003-c00",
+        "doc_id": "POL-003",
+        "title": "Refund Policy",
+        "chunk_index": 0,
+        "content_hash": "83b2069b6315ed3bfdf88785db950a2636f48e79251adb7744de2fc3bd81687b",
+        "score": 6.260659,
+        "score_normalized": 1.0,
+        "matched_terms": [
+          "chargeback",
+          "refund",
+          "reimbursement"
+        ],
+        "text": "Refund eligibility depends on payment method, account status, and internal review. Support agents must not promise that a refund will be issued. They may explain that the case will be reviewed and that users may be asked for additional information."
+      },
+      {
+        "rank": 2,
+        "chunk_id": "POL-004-c00",
+        "doc_id": "POL-004",
+        "title": "Account Closure Policy",
+        "chunk_index": 0,
+        "content_hash": "8358cc8110e31aed75f77945b8b497d4e8fcfaf6e9872217b02d54fc125aa331",
+        "score": 1.150856,
+        "score_normalized": 0.183824,
+        "matched_terms": [
+          "back"
+        ],
+        "text": "Users may request account closure through support. Open investigations, unresolved balances, or compliance restrictions may delay closure. Support agents must not state that closure is immediate unless confirmed by back-office systems."
+      },
+      {
+        "rank": 3,
+        "chunk_id": "POL-001-c00",
+        "doc_id": "POL-001",
+        "title": "Password Reset Policy",
+        "chunk_index": 0,
+        "content_hash": "df8b8c8bf9c806feb43a6a313a0109c6cb49ffd96eb30d09a6338fcaa6475552",
+        "score": 0.0,
+        "score_normalized": 0.0,
+        "matched_terms": [],
+        "text": "Users can reset their password from the login page using the Forgot Password link. Support agents cannot manually view or set customer passwords. If the user does not receive the reset email, they should check spam and confirm the registered email address."
+      }
+    ],
+    "created_at": "2026-10-19T10:48:34.814+00:00"
+  },
+  {
+    "retrieval_id": "RET-M3-2d95f402",
+    "message_id": "M3",
+    "query": "I forgot my password and I am not getting any reset email. What should I do?",
+    "query_tokens": [
+      "password",
+      "credential",
+      "credential",
+      "reset",
+      "am",
+      "not",
+      "getting",
+      "password",
+      "credential",
+      "credential",
+      "reset",
+      "email"
+    ],
+    "top_k": 3,
+    "returned_count": 3,
+    "weak_support": false,
+    "top_score": 21.331586,
+    "min_relevance_score": 0.05,
+    "index_fingerprint": "5baa0ff48fad",
+    "results": [
+      {
+        "rank": 1,
+        "chunk_id": "POL-001-c00",
+        "doc_id": "POL-001",
+        "title": "Password Reset Policy",
+        "chunk_index": 0,
+        "content_hash": "df8b8c8bf9c806feb43a6a313a0109c6cb49ffd96eb30d09a6338fcaa6475552",
+        "score": 21.331586,
+        "score_normalized": 1.0,
+        "matched_terms": [
+          "credential",
+          "email",
+          "not",
+          "password",
+          "reset"
+        ],
+        "text": "Users can reset their password from the login page using the Forgot Password link. Support agents cannot manually view or set customer passwords. If the user does not receive the reset email, they should check spam and confirm the registered email address."
+      },
+      {
+        "rank": 2,
+        "chunk_id": "POL-003-c00",
+        "doc_id": "POL-003",
+        "title": "Refund Policy",
+        "chunk_index": 0,
+        "content_hash": "83b2069b6315ed3bfdf88785db950a2636f48e79251adb7744de2fc3bd81687b",
+        "score": 0.113197,
+        "score_normalized": 0.005307,
+        "matched_terms": [
+          "not"
+        ],
+        "text": "Refund eligibility depends on payment method, account status, and internal review. Support agents must not promise that a refund will be issued. They may explain that the case will be reviewed and that users may be asked for additional information."
+      },
+      {
+        "rank": 3,
+        "chunk_id": "POL-002-c00",
+        "doc_id": "POL-002",
+        "title": "Verification Review Policy",
+        "chunk_index": 0,
+        "content_hash": "54a8559f698cafb772a6f22ed6cd22dc7b21a4beac391adcd409b7a020ab2586",
+        "score": 0.109138,
+        "score_normalized": 0.005116,
+        "matched_terms": [
+          "not"
+        ],
+        "text": "Identity verification reviews are typically completed within 1 to 3 business days. Support agents must not guarantee approval. If documents are rejected, the user should be asked to submit a clearer or valid document based on the rejection reason."
+      }
+    ],
+    "created_at": "2026-10-19T10:48:34.814+00:00"
+  },
+  {
+    "retrieval_id": "RET-M4-0c7d0eb2",
+    "message_id": "M4",
+    "query": "Close my account today and make sure nothing blocks it.",
+    "query_tokens": [
+      "account",
+      "closure",
+      "close",
+      "closed",
+      "closing",
+      "today",
+      "make",
+      "sure",
+      "nothing",
+      "block"
+    ],
+    "top_k": 3,
+    "returned_count": 3,
+    "weak_support": false,
+    "top_score": 9.534852,
+    "min_relevance_score": 0.05,
+    "index_fingerprint": "5baa0ff48fad",
+    "results": [
+      {
+        "rank": 1,
+        "chunk_id": "POL-004-c00",
+        "doc_id": "POL-004",
+        "title": "Account Closure Policy",
+        "chunk_index": 0,
+        "content_hash": "8358cc8110e31aed75f77945b8b497d4e8fcfaf6e9872217b02d54fc125aa331",
+        "score": 9.534852,
+        "score_normalized": 1.0,
+        "matched_terms": [
+          "account",
+          "close",
+          "closed",
+          "closing",
+          "closure"
+        ],
+        "text": "Users may request account closure through support. Open investigations, unresolved balances, or compliance restrictions may delay closure. Support agents must not state that closure is immediate unless confirmed by back-office systems."
+      },
+      {
+        "rank": 2,
+        "chunk_id": "POL-003-c00",
+        "doc_id": "POL-003",
+        "title": "Refund Policy",
+        "chunk_index": 0,
+        "content_hash": "83b2069b6315ed3bfdf88785db950a2636f48e79251adb7744de2fc3bd81687b",
+        "score": 0.744704,
+        "score_normalized": 0.078103,
+        "matched_terms": [
+          "account"
+        ],
+        "text": "Refund eligibility depends on payment method, account status, and internal review. Support agents must not promise that a refund will be issued. They may explain that the case will be reviewed and that users may be asked for additional information."
+      },
+      {
+        "rank": 3,
+        "chunk_id": "POL-001-c00",
+        "doc_id": "POL-001",
+        "title": "Password Reset Policy",
+        "chunk_index": 0,
+        "content_hash": "df8b8c8bf9c806feb43a6a313a0109c6cb49ffd96eb30d09a6338fcaa6475552",
+        "score": 0.0,
+        "score_normalized": 0.0,
+        "matched_terms": [],
+        "text": "Users can reset their password from the login page using the Forgot Password link. Support agents cannot manually view or set customer passwords. If the user does not receive the reset email, they should check spam and confirm the registered email address."
+      }
+    ],
+    "created_at": "2026-10-19T10:48:34.814+00:00"
+  }
+]

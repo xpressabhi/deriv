@@ -1,0 +1,24 @@
+{
+  "documents": [
+    {
+      "doc_id": "P-101",
+      "title": "Sign-in and Password Help",
+      "text": "Customers who forget a password can use the Forgot password option on the sign-in screen. Staff are not able to see or change passwords. If no reset message arrives, ask the customer to check the junk folder and verify the email address on file."
+    },
+    {
+      "doc_id": "P-102",
+      "title": "Identity Check Timelines",
+      "text": "Identity checks are usually finished in two to three working days. Staff cannot promise that a check will pass. When a document is refused, ask the customer to send a clearer copy that matches the refusal reason."
+    },
+    {
+      "doc_id": "P-103",
+      "title": "Payment Return Review",
+      "text": "Whether a payment is returned depends on the payment channel, the account state, and an internal assessment. Staff must not promise that a payout will be made. They can say the request will be assessed and that more information may be requested."
+    },
+    {
+      "doc_id": "P-104",
+      "title": "Closing an Account",
+      "text": "An account can be closed by contacting support. Open cases, unpaid balances, or compliance holds can slow this down. Staff must not say a closure is instant unless the back office confirms it."
+    }
+  ]
+}

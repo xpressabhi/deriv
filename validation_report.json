@@ -1,0 +1,637 @@
+{
+  "valid": true,
+  "checked_at": "2026-10-19T10:48:26.935+00:00",
+  "out_dir": "/Users/amaurya/Documents/GitHub/deriv",
+  "checks": [
+    {
+      "name": "artifact.exists.policy_corpus",
+      "passed": true,
+      "details": {
+        "path": "/Users/amaurya/Documents/GitHub/deriv/policy_corpus.json"
+      }
+    },
+    {
+      "name": "artifact.exists.retrieval_audit",
+      "passed": true,
+      "details": {
+        "path": "/Users/amaurya/Documents/GitHub/deriv/retrieval_audit.json"
+      }
+    },
+    {
+      "name": "artifact.exists.gate_decisions",
+      "passed": true,
+      "details": {
+        "path": "/Users/amaurya/Documents/GitHub/deriv/gate_decisions.json"
+      }
+    },
+    {
+      "name": "artifact.exists.draft_replies",
+      "passed": true,
+      "details": {
+        "path": "/Users/amaurya/Documents/GitHub/deriv/draft_replies.json"
+      }
+    },
+    {
+      "name": "artifact.exists.verification_results",
+      "passed": true,
+      "details": {
+        "path": "/Users/amaurya/Documents/GitHub/deriv/verification_results.json"
+      }
+    },
+    {
+      "name": "artifact.exists.repair_actions",
+      "passed": true,
+      "details": {
+        "path": "/Users/amaurya/Documents/GitHub/deriv/repair_actions.json"
+      }
+    },
+    {
+      "name": "artifact.exists.final_responses",
+      "passed": true,
+      "details": {
+        "path": "/Users/amaurya/Documents/GitHub/deriv/final_responses.json"
+      }
+    },
+    {
+      "name": "artifact.exists.llm_calls",
+      "passed": true,
+      "details": {
+        "path": "/Users/amaurya/Documents/GitHub/deriv/llm_calls.jsonl"
+      }
+    },
+    {
+      "name": "artifact.exists.run_manifest",
+      "passed": true,
+      "details": {
+        "path": "/Users/amaurya/Documents/GitHub/deriv/run_manifest.json"
+      }
+    },
+    {
+      "name": "artifact.exists.operator_report",
+      "passed": true,
+      "details": {
+        "path": "/Users/amaurya/Documents/GitHub/deriv/operator_report.md"
+      }
+    },
+    {
+      "name": "artifact.exists.operator_report_json",
+      "passed": true,
+      "details": {
+        "path": "/Users/amaurya/Documents/GitHub/deriv/operator_report.json"
+      }
+    },
+    {
+      "name": "artifact.exists.chunk_change_report",
+      "passed": true,
+      "details": {
+        "path": "/Users/amaurya/Documents/GitHub/deriv/chunk_change_report.json"
+      }
+    },
+    {
+      "name": "artifact.exists.index",
+      "passed": true,
+      "details": {
+        "path": "/Users/amaurya/Documents/GitHub/deriv/index/bm25_index.json"
+      }
+    },
+    {
+      "name": "artifact.exists.index_manifest",
+      "passed": true,
+      "details": {
+        "path": "/Users/amaurya/Documents/GitHub/deriv/index/index_manifest.json"
+      }
+    },
+    {
+      "name": "artifact.exists.token_cache",
+      "passed": true,
+      "details": {
+        "path": "/Users/amaurya/Documents/GitHub/deriv/index/chunk_token_cache.json"
+      }
+    },
+    {
+      "name": "artifact.json.policy_corpus",
+      "passed": true,
+      "details": {
+        "path": "/Users/amaurya/Documents/GitHub/deriv/policy_corpus.json"
+      }
+    },
+    {
+      "name": "artifact.json.retrieval_audit",
+      "passed": true,
+      "details": {
+        "path": "/Users/amaurya/Documents/GitHub/deriv/retrieval_audit.json"
+      }
+    },
+    {
+      "name": "artifact.json.gate_decisions",
+      "passed": true,
+      "details": {
+        "path": "/Users/amaurya/Documents/GitHub/deriv/gate_decisions.json"
+      }
+    },
+    {
+      "name": "artifact.json.draft_replies",
+      "passed": true,
+      "details": {
+        "path": "/Users/amaurya/Documents/GitHub/deriv/draft_replies.json"
+      }
+    },
+    {
+      "name": "artifact.json.verification_results",
+      "passed": true,
+      "details": {
+        "path": "/Users/amaurya/Documents/GitHub/deriv/verification_results.json"
+      }
+    },
+    {
+      "name": "artifact.json.repair_actions",
+      "passed": true,
+      "details": {
+        "path": "/Users/amaurya/Documents/GitHub/deriv/repair_actions.json"
+      }
+    },
+    {
+      "name": "artifact.json.final_responses",
+      "passed": true,
+      "details": {
+        "path": "/Users/amaurya/Documents/GitHub/deriv/final_responses.json"
+      }
+    },
+    {
+      "name": "artifact.json.run_manifest",
+      "passed": true,
+      "details": {
+        "path": "/Users/amaurya/Documents/GitHub/deriv/run_manifest.json"
+      }
+    },
+    {
+      "name": "artifact.json.operator_report_json",
+      "passed": true,
+      "details": {
+        "path": "/Users/amaurya/Documents/GitHub/deriv/operator_report.json"
+      }
+    },
+    {
+      "name": "artifact.json.chunk_change_report",
+      "passed": true,
+      "details": {
+        "path": "/Users/amaurya/Documents/GitHub/deriv/chunk_change_report.json"
+      }
+    },
+    {
+      "name": "artifact.json.index",
+      "passed": true,
+      "details": {
+        "path": "/Users/amaurya/Documents/GitHub/deriv/index/bm25_index.json"
+      }
+    },
+    {
+      "name": "artifact.json.index_manifest",
+      "passed": true,
+      "details": {
+        "path": "/Users/amaurya/Documents/GitHub/deriv/index/index_manifest.json"
+      }
+    },
+    {
+      "name": "artifact.json.token_cache",
+      "passed": true,
+      "details": {
+        "path": "/Users/amaurya/Documents/GitHub/deriv/index/chunk_token_cache.json"
+      }
+    },
+    {
+      "name": "artifact.shape.policy_corpus",
+      "passed": true,
+      "details": {
+        "actual": "list"
+      }
+    },
+    {
+      "name": "artifact.shape.retrieval_audit",
+      "passed": true,
+      "details": {
+        "actual": "list"
+      }
+    },
+    {
+      "name": "artifact.shape.gate_decisions",
+      "passed": true,
+      "details": {
+        "actual": "list"
+      }
+    },
+    {
+      "name": "artifact.shape.draft_replies",
+      "passed": true,
+      "details": {
+        "actual": "list"
+      }
+    },
+    {
+      "name": "artifact.shape.verification_results",
+      "passed": true,
+      "details": {
+        "actual": "list"
+      }
+    },
+    {
+      "name": "artifact.shape.repair_actions",
+      "passed": true,
+      "details": {
+        "actual": "list"
+      }
+    },
+    {
+      "name": "artifact.shape.final_responses",
+      "passed": true,
+      "details": {
+        "actual": "list"
+      }
+    },
+    {
+      "name": "artifact.shape.run_manifest",
+      "passed": true,
+      "details": {
+        "actual": "dict"
+      }
+    },
+    {
+      "name": "input.messages",
+      "passed": true,
+      "details": {}
+    },
+    {
+      "name": "messages.ids.unique",
+      "passed": true,
+      "details": {
+        "count": 4
+      }
+    },
+    {
+      "name": "messages.fields",
+      "passed": true,
+      "details": {}
+    },
+    {
+      "name": "corpus.nonempty",
+      "passed": true,
+      "details": {}
+    },
+    {
+      "name": "corpus.ids.unique",
+      "passed": true,
+      "details": {
+        "count": 4
+      }
+    },
+    {
+      "name": "corpus.fields",
+      "passed": true,
+      "details": {}
+    },
+    {
+      "name": "corpus.content_hashes",
+      "passed": true,
+      "details": {}
+    },
+    {
+      "name": "corpus.content_hash_matches_text",
+      "passed": true,
+      "details": {}
+    },
+    {
+      "name": "corpus.chunk_indices",
+      "passed": true,
+      "details": {}
+    },
+    {
+      "name": "retrieval.coverage",
+      "passed": true,
+      "details": {
+        "messages": 4
+      }
+    },
+    {
+      "name": "retrieval.top3_and_valid_chunks",
+      "passed": true,
+      "details": {
+        "problems": []
+      }
+    },
+    {
+      "name": "retrieval.metadata",
+      "passed": true,
+      "details": {}
+    },
+    {
+      "name": "gate.coverage",
+      "passed": true,
+      "details": {}
+    },
+    {
+      "name": "gate.one_per_message",
+      "passed": true,
+      "details": {}
+    },
+    {
+      "name": "gate.valid_modes",
+      "passed": true,
+      "details": {
+        "modes": [
+          "no_guarantees",
+          "standard"
+        ]
+      }
+    },
+    {
+      "name": "gate.has_matched_rules",
+      "passed": true,
+      "details": {}
+    },
+    {
+      "name": "manifest.stage.ingest",
+      "passed": true,
+      "details": {
+        "stage_order": [
+          "ingest",
+          "index",
+          "retrieve",
+          "gate",
+          "generate",
+          "verify",
+          "repair",
+          "report"
+        ]
+      }
+    },
+    {
+      "name": "manifest.stage.index",
+      "passed": true,
+      "details": {
+        "stage_order": [
+          "ingest",
+          "index",
+          "retrieve",
+          "gate",
+          "generate",
+          "verify",
+          "repair",
+          "report"
+        ]
+      }
+    },
+    {
+      "name": "manifest.stage.retrieve",
+      "passed": true,
+      "details": {
+        "stage_order": [
+          "ingest",
+          "index",
+          "retrieve",
+          "gate",
+          "generate",
+          "verify",
+          "repair",
+          "report"
+        ]
+      }
+    },
+    {
+      "name": "manifest.stage.gate",
+      "passed": true,
+      "details": {
+        "stage_order": [
+          "ingest",
+          "index",
+          "retrieve",
+          "gate",
+          "generate",
+          "verify",
+          "repair",
+          "report"
+        ]
+      }
+    },
+    {
+      "name": "manifest.stage.generate",
+      "passed": true,
+      "details": {
+        "stage_order": [
+          "ingest",
+          "index",
+          "retrieve",
+          "gate",
+          "generate",
+          "verify",
+          "repair",
+          "report"
+        ]
+      }
+    },
+    {
+      "name": "manifest.stage.verify",
+      "passed": true,
+      "details": {
+        "stage_order": [
+          "ingest",
+          "index",
+          "retrieve",
+          "gate",
+          "generate",
+          "verify",
+          "repair",
+          "report"
+        ]
+      }
+    },
+    {
+      "name": "manifest.stage.repair",
+      "passed": true,
+      "details": {
+        "stage_order": [
+          "ingest",
+          "index",
+          "retrieve",
+          "gate",
+          "generate",
+          "verify",
+          "repair",
+          "report"
+        ]
+      }
+    },
+    {
+      "name": "manifest.stage.report",
+      "passed": true,
+      "details": {
+        "stage_order": [
+          "ingest",
+          "index",
+          "retrieve",
+          "gate",
+          "generate",
+          "verify",
+          "repair",
+          "report"
+        ]
+      }
+    },
+    {
+      "name": "manifest.gate_before_generate",
+      "passed": true,
+      "details": {}
+    },
+    {
+      "name": "manifest.generate_before_verify",
+      "passed": true,
+      "details": {}
+    },
+    {
+      "name": "drafts.coverage",
+      "passed": true,
+      "details": {}
+    },
+    {
+      "name": "drafts.one_per_message",
+      "passed": true,
+      "details": {}
+    },
+    {
+      "name": "drafts.grounded_and_gated",
+      "passed": true,
+      "details": {
+        "problems": []
+      }
+    },
+    {
+      "name": "verifications.initial_coverage",
+      "passed": true,
+      "details": {}
+    },
+    {
+      "name": "verifications.structured",
+      "passed": true,
+      "details": {
+        "problems": []
+      }
+    },
+    {
+      "name": "verifications.initial_hash_matches_draft",
+      "passed": true,
+      "details": {}
+    },
+    {
+      "name": "finals.coverage",
+      "passed": true,
+      "details": {
+        "messages": 4,
+        "finals": 4
+      }
+    },
+    {
+      "name": "finals.one_per_message",
+      "passed": true,
+      "details": {
+        "finals": 4
+      }
+    },
+    {
+      "name": "finals.safe_and_traceable",
+      "passed": true,
+      "details": {
+        "problems": []
+      }
+    },
+    {
+      "name": "repairs.paths_recorded",
+      "passed": true,
+      "details": {
+        "problems": []
+      }
+    },
+    {
+      "name": "llm_calls.logged",
+      "passed": true,
+      "details": {
+        "calls": 4,
+        "problems": []
+      }
+    },
+    {
+      "name": "llm_calls.present_when_llm_mode",
+      "passed": true,
+      "details": {
+        "calls": 4
+      }
+    },
+    {
+      "name": "manifest.policy_hash_matches_current_input",
+      "passed": true,
+      "details": {
+        "path": "/Users/amaurya/Documents/GitHub/deriv/policy_docs.json"
+      }
+    },
+    {
+      "name": "manifest.messages_hash_matches_current_input",
+      "passed": true,
+      "details": {
+        "path": "/Users/amaurya/Documents/GitHub/deriv/messages.json"
+      }
+    },
+    {
+      "name": "manifest.config_hash_matches_current_input",
+      "passed": true,
+      "details": {
+        "path": "/Users/amaurya/Documents/GitHub/deriv/config.json"
+      }
+    },
+    {
+      "name": "manifest.stage_record.gate",
+      "passed": true,
+      "details": {}
+    },
+    {
+      "name": "manifest.stage_record.generate",
+      "passed": true,
+      "details": {}
+    },
+    {
+      "name": "manifest.stage_record.verify",
+      "passed": true,
+      "details": {}
+    },
+    {
+      "name": "manifest.stage_record.repair",
+      "passed": true,
+      "details": {}
+    },
+    {
+      "name": "manifest.gate_stage_finishes_before_generation",
+      "passed": true,
+      "details": {
+        "gate_finished_at": "2026-10-19 10:46:58.610000+00:00",
+        "generate_started_at": "2026-10-19 10:46:58.610000+00:00"
+      }
+    }
+  ],
+  "errors": [],
+  "summary": {
+    "messages": 4,
+    "chunks": 4,
+    "retrievals": 4,
+    "gates": 4,
+    "drafts": 4,
+    "verifications": 4,
+    "repairs": 0,
+    "finals": 4,
+    "final_statuses": {
+      "approved": 4
+    },
+    "policy_modes": {
+      "no_guarantees": 3,
+      "standard": 1
+    },
+    "issue_types": {},
+    "llm_calls": 4
+  }
+}

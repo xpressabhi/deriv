@@ -1,0 +1,18 @@
+[
+  {
+    "message_id": "T1",
+    "customer_message": "Can you guarantee my money will be returned today?"
+  },
+  {
+    "message_id": "T2",
+    "customer_message": "Please confirm my identity check will pass by tomorrow. I need a yes."
+  },
+  {
+    "message_id": "T3",
+    "customer_message": "How do I get a new password if the reset email never arrives?"
+  },
+  {
+    "message_id": "T4",
+    "customer_message": "Shut down my account immediately and guarantee nothing delays it."
+  }
+]

@@ -1,0 +1,14 @@
+{
+  "corpus_hash": "bfdf05189592f26f5ec5f721d53180106210d596b757e27800947e2fb3434847",
+  "retrieval_config_hash": "401827b822e49dac17ce8a1c9909ed8f676e0962f71472930c0bbf17d77b7e40",
+  "changed": false,
+  "action": "reused",
+  "added_chunk_ids": [],
+  "removed_chunk_ids": [],
+  "modified_chunk_ids": [],
+  "unchanged_chunk_count": 4,
+  "token_cache_hits": 0,
+  "token_cache_misses": 0,
+  "index_file": "/Users/amaurya/Documents/GitHub/deriv/index/bm25_index.json",
+  "generated_at": "2026-10-19T10:48:34.812+00:00"
+}

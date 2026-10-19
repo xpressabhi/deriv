@@ -1,0 +1,18 @@
+[
+  {
+    "message_id": "M1",
+    "customer_message": "I submitted my ID yesterday. Can you confirm I will be verified today?"
+  },
+  {
+    "message_id": "M2",
+    "customer_message": "Please refund my deposit right now. I need confirmation that the money is coming back."
+  },
+  {
+    "message_id": "M3",
+    "customer_message": "I forgot my password and I am not getting any reset email. What should I do?"
+  },
+  {
+    "message_id": "M4",
+    "customer_message": "Close my account today and make sure nothing blocks it."
+  }
+]

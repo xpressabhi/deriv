@@ -1,0 +1,289 @@
+[
+  {
+    "gate_decision_id": "GATE-M1-8687fc8fc9",
+    "gate_version": "1.0",
+    "message_id": "M1",
+    "customer_message": "I submitted my ID yesterday. Can you confirm I will be verified today?",
+    "input_hash": "8687fc8fc90e357b",
+    "sensitive": true,
+    "categories": [
+      "verification"
+    ],
+    "escalation": true,
+    "guarantee_hits": [
+      {
+        "pattern_index": 3,
+        "pattern": "\\bconfirm(?:ed|s|ation)?\\b",
+        "matched_text": "confirm",
+        "span_start": 37,
+        "span_end": 44
+      },
+      {
+        "pattern_index": 8,
+        "pattern": "\\bwill\\s+(?:definitely\\s+)?be\\b",
+        "matched_text": "will be",
+        "span_start": 47,
+        "span_end": 54
+      }
+    ],
+    "immediacy_hits": [
+      {
+        "pattern_index": 1,
+        "pattern": "\\btoday\\b",
+        "matched_text": "today",
+        "span_start": 64,
+        "span_end": 69
+      }
+    ],
+    "policy_mode": "no_guarantees",
+    "constraints": [
+      "no_guarantees",
+      "review_required"
+    ],
+    "matched_rule_ids": [
+      "category.verification.p1",
+      "escalation.guarantee.p3",
+      "escalation.guarantee.p8",
+      "escalation.immediacy.p1"
+    ],
+    "matched_rules": [
+      {
+        "rule_id": "category.verification.p1",
+        "kind": "category",
+        "category": "verification",
+        "pattern_index": 1,
+        "pattern": "\\bverif(?:y|ied|ication|ications)\\b",
+        "matched_text": "verified",
+        "span_start": 55,
+        "span_end": 63
+      },
+      {
+        "rule_id": "escalation.guarantee.p3",
+        "kind": "escalation",
+        "category": "guarantee",
+        "pattern_index": 3,
+        "pattern": "\\bconfirm(?:ed|s|ation)?\\b",
+        "matched_text": "confirm",
+        "span_start": 37,
+        "span_end": 44
+      },
+      {
+        "rule_id": "escalation.guarantee.p8",
+        "kind": "escalation",
+        "category": "guarantee",
+        "pattern_index": 8,
+        "pattern": "\\bwill\\s+(?:definitely\\s+)?be\\b",
+        "matched_text": "will be",
+        "span_start": 47,
+        "span_end": 54
+      },
+      {
+        "rule_id": "escalation.immediacy.p1",
+        "kind": "escalation",
+        "category": "immediacy",
+        "pattern_index": 1,
+        "pattern": "\\btoday\\b",
+        "matched_text": "today",
+        "span_start": 64,
+        "span_end": 69
+      }
+    ],
+    "reason": "sensitive areas: verification; guarantee/confirmation language; immediacy language",
+    "created_at": "2026-10-19T10:48:34.818+00:00"
+  },
+  {
+    "gate_decision_id": "GATE-M2-fb2fa56ebc",
+    "gate_version": "1.0",
+    "message_id": "M2",
+    "customer_message": "Please refund my deposit right now. I need confirmation that the money is coming back.",
+    "input_hash": "fb2fa56ebc6c2b2c",
+    "sensitive": true,
+    "categories": [
+      "refund"
+    ],
+    "escalation": true,
+    "guarantee_hits": [
+      {
+        "pattern_index": 3,
+        "pattern": "\\bconfirm(?:ed|s|ation)?\\b",
+        "matched_text": "confirmation",
+        "span_start": 43,
+        "span_end": 55
+      },
+      {
+        "pattern_index": 11,
+        "pattern": "\\bneed\\s+(?:a\\s+)?(?:confirmation|yes|answer)\\b",
+        "matched_text": "need confirmation",
+        "span_start": 38,
+        "span_end": 55
+      }
+    ],
+    "immediacy_hits": [
+      {
+        "pattern_index": 2,
+        "pattern": "\\bright\\s+now\\b",
+        "matched_text": "right now",
+        "span_start": 25,
+        "span_end": 34
+      }
+    ],
+    "policy_mode": "no_guarantees",
+    "constraints": [
+      "no_guarantees",
+      "review_required"
+    ],
+    "matched_rule_ids": [
+      "category.refund.p1",
+      "category.refund.p5",
+      "escalation.guarantee.p3",
+      "escalation.guarantee.p11",
+      "escalation.immediacy.p2"
+    ],
+    "matched_rules": [
+      {
+        "rule_id": "category.refund.p1",
+        "kind": "category",
+        "category": "refund",
+        "pattern_index": 1,
+        "pattern": "\\brefund(?:s|ed|ing)?\\b",
+        "matched_text": "refund",
+        "span_start": 7,
+        "span_end": 13
+      },
+      {
+        "rule_id": "category.refund.p5",
+        "kind": "category",
+        "category": "refund",
+        "pattern_index": 5,
+        "pattern": "\\b(?:money|payment|payout|deposit)\\b[^.?!]{0,35}\\b(?:return|returned|back|refund|reimburse)\\b",
+        "matched_text": "money is coming back",
+        "span_start": 65,
+        "span_end": 85
+      },
+      {
+        "rule_id": "escalation.guarantee.p3",
+        "kind": "escalation",
+        "category": "guarantee",
+        "pattern_index": 3,
+        "pattern": "\\bconfirm(?:ed|s|ation)?\\b",
+        "matched_text": "confirmation",
+        "span_start": 43,
+        "span_end": 55
+      },
+      {
+        "rule_id": "escalation.guarantee.p11",
+        "kind": "escalation",
+        "category": "guarantee",
+        "pattern_index": 11,
+        "pattern": "\\bneed\\s+(?:a\\s+)?(?:confirmation|yes|answer)\\b",
+        "matched_text": "need confirmation",
+        "span_start": 38,
+        "span_end": 55
+      },
+      {
+        "rule_id": "escalation.immediacy.p2",
+        "kind": "escalation",
+        "category": "immediacy",
+        "pattern_index": 2,
+        "pattern": "\\bright\\s+now\\b",
+        "matched_text": "right now",
+        "span_start": 25,
+        "span_end": 34
+      }
+    ],
+    "reason": "sensitive areas: refund; guarantee/confirmation language; immediacy language",
+    "created_at": "2026-10-19T10:48:34.818+00:00"
+  },
+  {
+    "gate_decision_id": "GATE-M3-15df4f3b5c",
+    "gate_version": "1.0",
+    "message_id": "M3",
+    "customer_message": "I forgot my password and I am not getting any reset email. What should I do?",
+    "input_hash": "15df4f3b5c4d2310",
+    "sensitive": false,
+    "categories": [],
+    "escalation": false,
+    "guarantee_hits": [],
+    "immediacy_hits": [],
+    "policy_mode": "standard",
+    "constraints": [],
+    "matched_rule_ids": [],
+    "matched_rules": [],
+    "reason": "no sensitive category or escalation language matched",
+    "created_at": "2026-10-19T10:48:34.818+00:00"
+  },
+  {
+    "gate_decision_id": "GATE-M4-34362cf659",
+    "gate_version": "1.0",
+    "message_id": "M4",
+    "customer_message": "Close my account today and make sure nothing blocks it.",
+    "input_hash": "34362cf659ca49cb",
+    "sensitive": true,
+    "categories": [
+      "account_closure"
+    ],
+    "escalation": true,
+    "guarantee_hits": [
+      {
+        "pattern_index": 9,
+        "pattern": "\\bmake\\s+sure\\b",
+        "matched_text": "make sure",
+        "span_start": 27,
+        "span_end": 36
+      }
+    ],
+    "immediacy_hits": [
+      {
+        "pattern_index": 1,
+        "pattern": "\\btoday\\b",
+        "matched_text": "today",
+        "span_start": 17,
+        "span_end": 22
+      }
+    ],
+    "policy_mode": "no_guarantees",
+    "constraints": [
+      "no_guarantees",
+      "review_required"
+    ],
+    "matched_rule_ids": [
+      "category.account_closure.p1",
+      "escalation.guarantee.p9",
+      "escalation.immediacy.p1"
+    ],
+    "matched_rules": [
+      {
+        "rule_id": "category.account_closure.p1",
+        "kind": "category",
+        "category": "account_closure",
+        "pattern_index": 1,
+        "pattern": "\\bclos(?:e|ing|ed|ure)\\b[^.?!]{0,30}\\b(?:account|it)\\b",
+        "matched_text": "Close my account",
+        "span_start": 0,
+        "span_end": 16
+      },
+      {
+        "rule_id": "escalation.guarantee.p9",
+        "kind": "escalation",
+        "category": "guarantee",
+        "pattern_index": 9,
+        "pattern": "\\bmake\\s+sure\\b",
+        "matched_text": "make sure",
+        "span_start": 27,
+        "span_end": 36
+      },
+      {
+        "rule_id": "escalation.immediacy.p1",
+        "kind": "escalation",
+        "category": "immediacy",
+        "pattern_index": 1,
+        "pattern": "\\btoday\\b",
+        "matched_text": "today",
+        "span_start": 17,
+        "span_end": 22
+      }
+    ],
+    "reason": "sensitive areas: account_closure; guarantee/confirmation language; immediacy language",
+    "created_at": "2026-10-19T10:48:34.818+00:00"
+  }
+]

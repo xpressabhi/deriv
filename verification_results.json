@@ -1,0 +1,94 @@
+[
+  {
+    "message_id": "M1",
+    "approved": true,
+    "issues": [],
+    "attempt": 1,
+    "is_fallback": false,
+    "draft_hash": "64d26c48af40fed2f4ad3491a54a8cb6a7065b3e4df2be3ffca29c342f172a2c",
+    "verifier_version": "deterministic-1.0",
+    "checks": {
+      "citation_integrity": true,
+      "prohibited_promises": true,
+      "grounding": true,
+      "mode_compliance": true
+    },
+    "issue_counts": {},
+    "prohibited_findings": [],
+    "retrieved_chunk_ids": [
+      "POL-002-c00",
+      "POL-001-c00",
+      "POL-003-c00"
+    ],
+    "verified_at": "2026-10-19T10:48:34.824+00:00"
+  },
+  {
+    "message_id": "M2",
+    "approved": true,
+    "issues": [],
+    "attempt": 1,
+    "is_fallback": false,
+    "draft_hash": "a7188c2454f506514c41212886db64867c0f90d8a22efa6f7497648a9a6252c7",
+    "verifier_version": "deterministic-1.0",
+    "checks": {
+      "citation_integrity": true,
+      "prohibited_promises": true,
+      "grounding": true,
+      "mode_compliance": true
+    },
+    "issue_counts": {},
+    "prohibited_findings": [],
+    "retrieved_chunk_ids": [
+      "POL-003-c00",
+      "POL-004-c00",
+      "POL-001-c00"
+    ],
+    "verified_at": "2026-10-19T10:48:34.825+00:00"
+  },
+  {
+    "message_id": "M3",
+    "approved": true,
+    "issues": [],
+    "attempt": 1,
+    "is_fallback": false,
+    "draft_hash": "912cf018eff76bd8cbdda467b1e829f37ccba74840de3165e60a5ad3a4c81aea",
+    "verifier_version": "deterministic-1.0",
+    "checks": {
+      "citation_integrity": true,
+      "prohibited_promises": true,
+      "grounding": true,
+      "mode_compliance": true
+    },
+    "issue_counts": {},
+    "prohibited_findings": [],
+    "retrieved_chunk_ids": [
+      "POL-001-c00",
+      "POL-003-c00",
+      "POL-002-c00"
+    ],
+    "verified_at": "2026-10-19T10:48:34.826+00:00"
+  },
+  {
+    "message_id": "M4",
+    "approved": true,
+    "issues": [],
+    "attempt": 1,
+    "is_fallback": false,
+    "draft_hash": "df8d0c53d6eb26ae24f333a53e7457d230390a141f2fd25858259f184d93b244",
+    "verifier_version": "deterministic-1.0",
+    "checks": {
+      "citation_integrity": true,
+      "prohibited_promises": true,
+      "grounding": true,
+      "mode_compliance": true
+    },
+    "issue_counts": {},
+    "prohibited_findings": [],
+    "retrieved_chunk_ids": [
+      "POL-004-c00",
+      "POL-003-c00",
+      "POL-001-c00"
+    ],
+    "verified_at": "2026-10-19T10:48:34.826+00:00"
+  }
+]

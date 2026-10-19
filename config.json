@@ -1,0 +1,294 @@
+{
+  "schema_version": 1,
+  "retrieval": {
+    "top_k": 3,
+    "bm25_k1": 1.5,
+    "bm25_b": 0.75,
+    "min_relevance_score": 0.05,
+    "stopwords": [
+      "a", "an", "and", "are", "as", "at", "be", "been", "being", "but", "by",
+      "can", "could", "did", "do", "does", "doing", "for", "from", "had", "has",
+      "have", "having", "he", "her", "here", "hers", "him", "his", "how", "i",
+      "if", "in", "into", "is", "it", "its", "just", "me", "my", "of", "on",
+      "or", "our", "ours", "please", "she", "should", "so", "some", "than",
+      "that", "the", "their", "theirs", "them", "then", "there", "these", "they",
+      "this", "those", "to", "too", "up", "us", "was", "we", "were", "what",
+      "when", "where", "which", "while", "who", "whom", "why", "will", "with",
+      "would", "you", "your", "yours", "using", "get", "got", "also", "any",
+      "about", "after", "before", "been", "very", "much", "now", "still"
+    ],
+    "phrase_synonyms": {
+      "money back": "refund",
+      "money coming back": "refund",
+      "money returned": "refund",
+      "payment returned": "refund",
+      "deposit back": "refund",
+      "return my funds": "refund",
+      "return my deposit": "refund",
+      "identity verification": "verification",
+      "identity review": "verification",
+      "id verification": "verification",
+      "id document": "document",
+      "id documents": "document",
+      "close my account": "account closure",
+      "close the account": "account closure",
+      "close account": "account closure",
+      "cancel my account": "account closure",
+      "delete my account": "account closure",
+      "shut down my account": "account closure",
+      "forgot password": "password reset",
+      "forgot my password": "password reset",
+      "new password": "password reset",
+      "reset email": "password reset email",
+      "reset link": "password reset link"
+    },
+    "token_synonyms": {
+      "refund": ["reimbursement", "chargeback"],
+      "reimbursement": ["refund"],
+      "verification": ["verify", "verified", "kyc"],
+      "verify": ["verification", "verified", "kyc"],
+      "verified": ["verification", "verify"],
+      "kyc": ["verification", "verify"],
+      "closure": ["close", "closed", "closing"],
+      "close": ["closure", "closed"],
+      "closed": ["closure", "close"],
+      "password": ["credential", "credentials"],
+      "approved": ["approval"],
+      "approval": ["approved"]
+    }
+  },
+  "chunking": {
+    "max_chars": 420,
+    "overlap_sentences": 1,
+    "min_chunk_chars": 40
+  },
+  "gate": {
+    "categories": {
+      "refund": {
+        "base_mode": "review_required",
+        "patterns": [
+          "\\brefund(?:s|ed|ing)?\\b",
+          "\\bmoney\\s+back\\b",
+          "\\bdeposit\\s+back\\b",
+          "\\breturn\\s+(?:my|the|our)?\\s*(?:funds?|deposit|money)\\b",
+          "\\b(?:money|payment|payout|deposit)\\b[^.?!]{0,35}\\b(?:return|returned|back|refund|reimburse)\\b",
+          "\\bchargeback\\b",
+          "\\breimburse(?:ment|d)?\\b"
+        ]
+      },
+      "verification": {
+        "base_mode": "review_required",
+        "patterns": [
+          "\\bverif(?:y|ied|ication|ications)\\b",
+          "\\bkyc\\b",
+          "\\bidentity\\s+(?:verification|review|check)\\b",
+          "\\bid\\s+(?:document|documents|verification|check)\\b",
+          "\\bdocuments?\\s+(?:approved|rejected|reviewed|verified)\\b",
+          "\\bapproval\\b"
+        ]
+      },
+      "account_closure": {
+        "base_mode": "review_required",
+        "patterns": [
+          "\\bclos(?:e|ing|ed|ure)\\b[^.?!]{0,30}\\b(?:account|it)\\b",
+          "\\b(?:account|it)\\b[^.?!]{0,30}\\bclos(?:e|ing|ed|ure)\\b",
+          "\\b(?:delete|cancel|terminate|shut\\s+down)\\b[^.?!]{0,25}\\b(?:account|it)\\b",
+          "\\baccount\\s+(?:closure|deletion|termination)\\b"
+        ]
+      },
+      "password_staff_action": {
+        "base_mode": "manual_action_not_allowed",
+        "patterns": [
+          "\\b(?:reset|set|change|view|see|reveal|tell|give|send|provide|retrieve|recover)\\b[^.?!]{0,25}\\b(?:my|the\\s+customer'?s|their)\\s+password\\b(?!\\s+(?:reset\\s+)?(?:email|link|instructions))",
+          "\\bpassword\\b[^.?!]{0,20}\\b(?:reset|set|changed|viewed|revealed|sent)\\b[^.?!]{0,15}\\b(?:for\\s+me|by\\s+(?:you|support|an?\\s+agent))\\b",
+          "\\b(?:can|could|would)\\s+(?:you|support|an?\\s+agent)\\b[^.?!]{0,30}\\b(?:reset|set|change|view|see|reveal|tell|give|send|provide)\\b[^.?!]{0,20}\\bpassword\\b(?!\\s+(?:reset\\s+)?(?:email|link|instructions))",
+          "\\bpassword\\b[^.?!]{0,15}\\bfor\\s+me\\b"
+        ]
+      }
+    },
+    "guarantee_patterns": [
+      "\\bguarantee(?:d|s)?\\b",
+      "\\bpromise(?:d|s)?\\b",
+      "\\bconfirm(?:ed|s|ation)?\\b",
+      "\\bassure(?:d|s)?\\b",
+      "\\bensure(?:d|s)?\\b",
+      "\\bdefinitely\\b",
+      "\\bcertain(?:ly)?\\b",
+      "\\bwill\\s+(?:definitely\\s+)?be\\b",
+      "\\bmake\\s+sure\\b",
+      "\\bmust\\b",
+      "\\bneed\\s+(?:a\\s+)?(?:confirmation|yes|answer)\\b",
+      "\\b100\\s*%\\b"
+    ],
+    "immediacy_patterns": [
+      "\\btoday\\b",
+      "\\bright\\s+now\\b",
+      "\\bimmediately\\b",
+      "\\basap\\b",
+      "\\binstant(?:ly)?\\b",
+      "\\bwithin\\s+(?:\\d+\\s+)?(?:minutes?|hours?)\\b",
+      "\\bsame\\s+day\\b",
+      "\\bno\\s+delay\\b",
+      "\\bnothing\\s+(?:should\\s+|will\\s+)?block\\b",
+      "\\bunblock\\b",
+      "\\bby\\s+(?:today|tomorrow|end\\s+of\\s+day)\\b",
+      "\\bbefore\\s+(?:today|tomorrow|end\\s+of\\s+day)\\b"
+    ]
+  },
+  "generation": {
+    "provider": "opencode-go",
+    "base_url": "https://opencode.ai/zen/go/v1",
+    "chat_path": "/chat/completions",
+    "model": "deepseek-v4.1-flash",
+    "user_agent": "opencode-support-pipeline/1.0",
+    "session_header": "x-opencode-session",
+    "temperature": 0,
+    "max_tokens": 1500,
+    "timeout_seconds": 60,
+    "max_retries": 2,
+    "retry_backoff_seconds": 1.0,
+    "llm_required": false,
+    "use_cache": true,
+    "cache_dir": "cache/llm_responses",
+    "response_format_json": true
+  },
+  "verification": {
+    "min_content_tokens": 2,
+    "min_sentence_support": 0.34,
+    "negation_window_chars": 100,
+    "courtesy_patterns": [
+      "^\\s*(?:hi|hello|dear|thank(?:s| you)|we\\s+appreciate|i\\s+understand|i(?:'m| am)\\s+sorry|i\\s+apologize|happy\\s+to\\s+help)\\b",
+      "^\\s*(?:please\\s+)?(?:let\\s+us\\s+know|feel\\s+free|do\\s+not\\s+hesitate|don't\\s+hesitate)\\b",
+      "^\\s*(?:best|kind)\\s+regards\\b",
+      "^\\s*(?:have\\s+a\\s+(?:great|good)\\s+day)\\b"
+    ],
+    "safe_phrases": [
+      "i can't confirm",
+      "i cannot confirm",
+      "i can't guarantee",
+      "i cannot guarantee",
+      "i'm unable to confirm",
+      "i am unable to confirm",
+      "not able to guarantee",
+      "not able to confirm",
+      "unable to guarantee",
+      "unable to confirm",
+      "we can't guarantee",
+      "we cannot guarantee",
+      "can't promise",
+      "cannot promise",
+      "can't guarantee approval",
+      "cannot guarantee approval",
+      "this requires review",
+      "this needs review",
+      "requires human review",
+      "requires a review",
+      "requires review",
+      "i don't have an approved policy",
+      "i do not have an approved policy",
+      "i've escalated",
+      "i have escalated",
+      "escalated it",
+      "support specialist will follow up"
+    ],
+    "hedge_patterns": [
+      "\\btypically\\b",
+      "\\busually\\b",
+      "\\bgenerally\\b",
+      "\\bmay\\b",
+      "\\bmight\\b",
+      "\\bcan\\s+take\\b",
+      "\\bup\\s+to\\b",
+      "\\bestimat(?:e|ed)\\b",
+      "\\bdepending\\s+on\\b",
+      "\\bsubject\\s+to\\b"
+    ],
+    "prohibited_patterns": [
+      {
+        "id": "guarantee_language",
+        "category": "generic",
+        "type": "prohibited_promise",
+        "pattern": "\\b(?:guarantee(?:d|s)?|promise(?:d|s)?|assure(?:d|s)?|definitely|certainly\\s+will|100\\s*%)\\b"
+      },
+      {
+        "id": "refund_outcome",
+        "category": "refund",
+        "type": "prohibited_promise",
+        "pattern": "\\b(?:refund|money|funds?|deposit)\\b[^.?!]{0,45}\\b(?:will|is\\s+going\\s+to|shall|has\\s+been|have\\s+been)\\b[^.?!]{0,25}\\b(?:issued|processed|returned|sent|approved|completed|paid)\\b"
+      },
+      {
+        "id": "verification_outcome",
+        "category": "verification",
+        "type": "prohibited_promise",
+        "pattern": "\\b(?:you|your\\s+(?:account|identity|documents?|verification))\\b[^.?!]{0,45}\\b(?:will\\s+be|are|is|has\\s+been)\\b[^.?!]{0,25}\\b(?:verified|approved|confirmed|completed|cleared)\\b"
+      },
+      {
+        "id": "closure_immediate",
+        "category": "account_closure",
+        "type": "prohibited_promise",
+        "pattern": "\\b(?:account|it|closure)\\b[^.?!]{0,40}\\b(?:will\\s+be|is|has\\s+been|will\\s+happen|is\\s+going\\s+to\\s+be)\\b[^.?!]{0,25}\\b(?:closed|deleted|terminated|complete|completed|immediate|immediately|today|now)\\b"
+      },
+      {
+        "id": "immediate_timing",
+        "category": "generic",
+        "type": "unsupported_claim",
+        "pattern": "\\b(?:immediately|right\\s+now|today|within\\s+(?:\\d+\\s+)?(?:minutes?|hours?)|instant(?:ly)?|same\\s+day)\\b"
+      },
+      {
+        "id": "staff_password_action",
+        "category": "password",
+        "type": "prohibited_promise",
+        "pattern": "\\b(?:we|support|agent|i)\\b[^.?!]{0,35}\\b(?:reset|set|change|view|see|reveal|provide|send)\\b[^.?!]{0,20}\\byour\\s+password\\b"
+      },
+      {
+        "id": "password_disclosure",
+        "category": "password",
+        "type": "prohibited_promise",
+        "pattern": "\\byour\\s+password\\s+(?:is|was|will\\s+be)\\b"
+      },
+      {
+        "id": "password_reset_claim",
+        "category": "password",
+        "type": "prohibited_promise",
+        "pattern": "\\b(?:i|we)\\s+(?:have\\s+)?(?:reset|changed|set|updated)\\s+your\\s+password\\b"
+      },
+      {
+        "id": "absolute_timing",
+        "category": "generic",
+        "type": "unsupported_claim",
+        "pattern": "\\b(?:will\\s+be|is|are|completed|approved|refunded|verified|closed)\\b[^.?!]{0,30}\\b(?:within|in|by)\\b[^.?!]{0,20}\\b(?:\\d+|one|two|three|four|five|six|seven)\\b[^.?!]{0,15}\\b(?:business\\s+)?(?:days?|hours?|weeks?)\\b"
+      }
+    ],
+    "mode_requirements": {
+      "no_guarantees": {
+        "require_any": [
+          "review", "eligib", "depend", "typically", "cannot", "can't", "unable",
+          "may", "might", "not guaranteed", "no guarantee", "subject to"
+        ]
+      },
+      "manual_action_not_allowed": {
+        "require_any": [
+          "reset", "forgot password", "spam", "registered email", "self-service",
+          "cannot", "can't", "unable"
+        ]
+      },
+      "review_required": {
+        "require_any": [
+          "review", "additional information", "may ask", "check", "investigat",
+          "process", "eligib", "depend"
+        ]
+      },
+      "standard": {
+        "require_any": []
+      }
+    }
+  },
+  "repair": {
+    "max_attempts": 1
+  },
+  "artifacts": {
+    "out_dir": ".",
+    "index_dir": "index",
+    "cache_dir": "cache"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "version": "1.0",
+  "corpus_hash": "bfdf05189592f26f5ec5f721d53180106210d596b757e27800947e2fb3434847",
+  "retrieval_config_hash": "401827b822e49dac17ce8a1c9909ed8f676e0962f71472930c0bbf17d77b7e40",
+  "chunk_count": 4,
+  "chunk_hashes": {
+    "POL-001-c00": "df8b8c8bf9c806feb43a6a313a0109c6cb49ffd96eb30d09a6338fcaa6475552",
+    "POL-002-c00": "54a8559f698cafb772a6f22ed6cd22dc7b21a4beac391adcd409b7a020ab2586",
+    "POL-003-c00": "83b2069b6315ed3bfdf88785db950a2636f48e79251adb7744de2fc3bd81687b",
+    "POL-004-c00": "8358cc8110e31aed75f77945b8b497d4e8fcfaf6e9872217b02d54fc125aa331"
+  },
+  "built_at": "2026-10-19T10:45:49.822+00:00",
+  "index_file": "bm25_index.json",
+  "token_cache_file": "chunk_token_cache.json"
+}

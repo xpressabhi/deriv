@@ -1,0 +1,102 @@
+[
+  {
+    "message_id": "M1",
+    "reply": "Thanks for submitting your ID. Identity verification reviews are typically completed within 1 to 3 business days, so timing depends on the review of your documents. I'm not able to guarantee approval or confirm a specific completion date, but if anything is rejected, you'll be asked to submit a clearer or valid document.",
+    "status": "approved",
+    "used_chunk_ids": [
+      "POL-002-c00"
+    ],
+    "retrieved_chunk_ids": [
+      "POL-002-c00",
+      "POL-001-c00",
+      "POL-003-c00"
+    ],
+    "policy_mode": "no_guarantees",
+    "gate_decision_id": "GATE-M1-8687fc8fc9",
+    "verification_approved": true,
+    "verification_attempt": 1,
+    "verification_draft_hash": "64d26c48af40fed2f4ad3491a54a8cb6a7065b3e4df2be3ffca29c342f172a2c",
+    "draft_generator": "llm",
+    "citation_source": "model",
+    "repair_action": "none",
+    "fallback_reason": null,
+    "insufficient_policy_support": false,
+    "final_hash": "64d26c48af40fed2f4ad3491a54a8cb6a7065b3e4df2be3ffca29c342f172a2c",
+    "created_at": "2026-10-19T10:48:34.827+00:00"
+  },
+  {
+    "message_id": "M2",
+    "reply": "I understand this is important, and I'm sorry for the worry. Refund eligibility depends on your payment method, account status, and internal review, so I can't confirm right now that a refund will be issued or when it might arrive. Your case will be reviewed, and you may be asked for additional information.",
+    "status": "approved",
+    "used_chunk_ids": [
+      "POL-003-c00"
+    ],
+    "retrieved_chunk_ids": [
+      "POL-003-c00",
+      "POL-004-c00",
+      "POL-001-c00"
+    ],
+    "policy_mode": "no_guarantees",
+    "gate_decision_id": "GATE-M2-fb2fa56ebc",
+    "verification_approved": true,
+    "verification_attempt": 1,
+    "verification_draft_hash": "a7188c2454f506514c41212886db64867c0f90d8a22efa6f7497648a9a6252c7",
+    "draft_generator": "llm",
+    "citation_source": "model",
+    "repair_action": "none",
+    "fallback_reason": null,
+    "insufficient_policy_support": false,
+    "final_hash": "a7188c2454f506514c41212886db64867c0f90d8a22efa6f7497648a9a6252c7",
+    "created_at": "2026-10-19T10:48:34.827+00:00"
+  },
+  {
+    "message_id": "M3",
+    "reply": "You can reset your password from the login page using the Forgot Password link. If the reset email isn't arriving, please check your spam folder and confirm that the email address on your account is the one you're checking. Note that support agents cannot view or set customer passwords, so the self-service reset is the way to go.",
+    "status": "approved",
+    "used_chunk_ids": [
+      "POL-001-c00"
+    ],
+    "retrieved_chunk_ids": [
+      "POL-001-c00",
+      "POL-003-c00",
+      "POL-002-c00"
+    ],
+    "policy_mode": "standard",
+    "gate_decision_id": "GATE-M3-15df4f3b5c",
+    "verification_approved": true,
+    "verification_attempt": 1,
+    "verification_draft_hash": "912cf018eff76bd8cbdda467b1e829f37ccba74840de3165e60a5ad3a4c81aea",
+    "draft_generator": "llm",
+    "citation_source": "model",
+    "repair_action": "none",
+    "fallback_reason": null,
+    "insufficient_policy_support": false,
+    "final_hash": "912cf018eff76bd8cbdda467b1e829f37ccba74840de3165e60a5ad3a4c81aea",
+    "created_at": "2026-10-19T10:48:34.827+00:00"
+  },
+  {
+    "message_id": "M4",
+    "reply": "I understand you want your account closed today. You can request account closure through support, but open investigations, unresolved balances, or compliance restrictions may delay closure, and I can’t confirm that closure will be immediate or completed today. The timing would depend on back-office confirmation.",
+    "status": "approved",
+    "used_chunk_ids": [
+      "POL-004-c00"
+    ],
+    "retrieved_chunk_ids": [
+      "POL-004-c00",
+      "POL-003-c00",
+      "POL-001-c00"
+    ],
+    "policy_mode": "no_guarantees",
+    "gate_decision_id": "GATE-M4-34362cf659",
+    "verification_approved": true,
+    "verification_attempt": 1,
+    "verification_draft_hash": "df8d0c53d6eb26ae24f333a53e7457d230390a141f2fd25858259f184d93b244",
+    "draft_generator": "llm",
+    "citation_source": "model",
+    "repair_action": "none",
+    "fallback_reason": null,
+    "insufficient_policy_support": false,
+    "final_hash": "df8d0c53d6eb26ae24f333a53e7457d230390a141f2fd25858259f184d93b244",
+    "created_at": "2026-10-19T10:48:34.827+00:00"
+  }
+]

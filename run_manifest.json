@@ -1,0 +1,168 @@
+{
+  "run_id": "run-20261019T104834809+0000-66ddd9",
+  "started_at": "2026-10-19T10:48:34.809+00:00",
+  "finished_at": "2026-10-19T10:48:34.829+00:00",
+  "policy_path": "/Users/amaurya/Documents/GitHub/deriv/policy_docs.json",
+  "messages_path": "/Users/amaurya/Documents/GitHub/deriv/messages.json",
+  "config_path": "/Users/amaurya/Documents/GitHub/deriv/config.json",
+  "config_hash": "5467e124b1955517df3991fc448336798c2abbb343401e81bf3945aa18ae874e",
+  "input_hashes": {
+    "policy_docs": "d399daf12a238710c156c81a00bb896721d4694cad0ad6da384f9e56e364900a",
+    "messages": "fc7b7cdae354ec009c5b28029e372e5b344c37f4098c6669585632459fe61ecf",
+    "config": "8687223b99166b5d40fa14ab788839a4f9222ba5f3a4985f90f138cb4f0649bc"
+  },
+  "stage_order": [
+    "ingest",
+    "index",
+    "retrieve",
+    "gate",
+    "generate",
+    "verify",
+    "repair",
+    "report"
+  ],
+  "stages": [
+    {
+      "stage": "ingest",
+      "started_at": "2026-10-19T10:48:34.810+00:00",
+      "finished_at": "2026-10-19T10:48:34.812+00:00",
+      "duration_ms": 1,
+      "status": "ok",
+      "details": {
+        "documents": 4,
+        "chunks": 4
+      }
+    },
+    {
+      "stage": "index",
+      "started_at": "2026-10-19T10:48:34.812+00:00",
+      "finished_at": "2026-10-19T10:48:34.813+00:00",
+      "duration_ms": 1,
+      "status": "ok",
+      "details": {
+        "chunks": 4,
+        "index_action": "reused",
+        "changed": false,
+        "token_cache_hits": 0,
+        "token_cache_misses": 0
+      }
+    },
+    {
+      "stage": "retrieve",
+      "started_at": "2026-10-19T10:48:34.813+00:00",
+      "finished_at": "2026-10-19T10:48:34.814+00:00",
+      "duration_ms": 1,
+      "status": "ok",
+      "details": {
+        "messages": 4,
+        "weak_support": 0
+      }
+    },
+    {
+      "stage": "gate",
+      "started_at": "2026-10-19T10:48:34.814+00:00",
+      "finished_at": "2026-10-19T10:48:34.819+00:00",
+      "duration_ms": 4,
+      "status": "ok",
+      "details": {
+        "messages": 4,
+        "modes": {
+          "no_guarantees": 3,
+          "standard": 1
+        },
+        "sensitive": 3
+      }
+    },
+    {
+      "stage": "generate",
+      "started_at": "2026-10-19T10:48:34.819+00:00",
+      "finished_at": "2026-10-19T10:48:34.821+00:00",
+      "duration_ms": 2,
+      "status": "ok",
+      "details": {
+        "drafts": 4,
+        "generators": {
+          "llm": 4
+        }
+      }
+    },
+    {
+      "stage": "verify",
+      "started_at": "2026-10-19T10:48:34.821+00:00",
+      "finished_at": "2026-10-19T10:48:34.827+00:00",
+      "duration_ms": 5,
+      "status": "ok",
+      "details": {
+        "approved": 4,
+        "failed": 0,
+        "issue_types": {}
+      }
+    },
+    {
+      "stage": "repair",
+      "started_at": "2026-10-19T10:48:34.827+00:00",
+      "finished_at": "2026-10-19T10:48:34.828+00:00",
+      "duration_ms": 1,
+      "status": "ok",
+      "details": {
+        "finals": {
+          "approved": 4
+        },
+        "repair_actions": {}
+      }
+    },
+    {
+      "stage": "report",
+      "started_at": "2026-10-19T10:48:34.828+00:00",
+      "finished_at": "2026-10-19T10:48:34.829+00:00",
+      "duration_ms": 0,
+      "status": "ok",
+      "details": {
+        "issues": {}
+      }
+    }
+  ],
+  "counts": {
+    "messages": 4,
+    "chunks": 4,
+    "final_statuses": {
+      "approved": 4
+    },
+    "policy_modes": {
+      "no_guarantees": 3,
+      "standard": 1
+    }
+  },
+  "llm_mode": "llm",
+  "llm_model": "deepseek-v4.1-flash",
+  "api_key_source": "dotenv",
+  "verifier": "deterministic",
+  "gate_version": "1.0",
+  "corpus_hash": "bfdf05189592f26f5ec5f721d53180106210d596b757e27800947e2fb3434847",
+  "artifact_paths": {
+    "corpus": "/Users/amaurya/Documents/GitHub/deriv/policy_corpus.json",
+    "retrieval": "/Users/amaurya/Documents/GitHub/deriv/retrieval_audit.json",
+    "gates": "/Users/amaurya/Documents/GitHub/deriv/gate_decisions.json",
+    "drafts": "/Users/amaurya/Documents/GitHub/deriv/draft_replies.json",
+    "verifications": "/Users/amaurya/Documents/GitHub/deriv/verification_results.json",
+    "repairs": "/Users/amaurya/Documents/GitHub/deriv/repair_actions.json",
+    "finals": "/Users/amaurya/Documents/GitHub/deriv/final_responses.json",
+    "llm_calls": "/Users/amaurya/Documents/GitHub/deriv/llm_calls.jsonl",
+    "change_report": "/Users/amaurya/Documents/GitHub/deriv/chunk_change_report.json",
+    "operator_md": "/Users/amaurya/Documents/GitHub/deriv/operator_report.md",
+    "operator_json": "/Users/amaurya/Documents/GitHub/deriv/operator_report.json"
+  },
+  "artifact_hashes": {
+    "corpus": "f3f0940d01b4268aebbc5914b07261ec460e6c27b331807db730941354fbb9f9",
+    "retrieval": "fffc17f0651a8506feac8b23978f6e05d0869008383251c5677bffb7cde201a1",
+    "gates": "ecc62bb23a8cea1e1e79dacc382989c8078396c3aaf1138b0195b63127c5a70a",
+    "drafts": "3661d3cfb6ba0d0beb2f02f8066d6c1aad41a9dd6b453fa9b39a636a4d3e088a",
+    "verifications": "ceba6f299786ac5b2681ae7ae59ee2b78dd91763b75fa49f2f7bed66e67b98e5",
+    "repairs": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "finals": "3673a377d7f55186be58a4c2b3a960738305f22960609d3ea44de6b337979123",
+    "llm_calls": "2ad21a9c5359694a5ca47561ce326dbb71635907aad9c7ff1e1bddcafd9dc49f",
+    "change_report": "c659e9ef0b8f2b8da55929c9b4f8277b494fa23cb0f76ef8e7f4e4681891db26",
+    "operator_md": "a56cf2710ddc9742362b6a1d6637c42c072050578c9a7b22b1a3bb955b9e0857",
+    "operator_json": "e2a73bcd354eefa779bebb5e5be9220184e4b10316cee3053963394ca99dfbe6"
+  }
+}

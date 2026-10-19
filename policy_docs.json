@@ -1,0 +1,24 @@
+{
+  "documents": [
+    {
+      "doc_id": "POL-001",
+      "title": "Password Reset Policy",
+      "text": "Users can reset their password from the login page using the Forgot Password link. Support agents cannot manually view or set customer passwords. If the user does not receive the reset email, they should check spam and confirm the registered email address."
+    },
+    {
+      "doc_id": "POL-002",
+      "title": "Verification Review Policy",
+      "text": "Identity verification reviews are typically completed within 1 to 3 business days. Support agents must not guarantee approval. If documents are rejected, the user should be asked to submit a clearer or valid document based on the rejection reason."
+    },
+    {
+      "doc_id": "POL-003",
+      "title": "Refund Policy",
+      "text": "Refund eligibility depends on payment method, account status, and internal review. Support agents must not promise that a refund will be issued. They may explain that the case will be reviewed and that users may be asked for additional information."
+    },
+    {
+      "doc_id": "POL-004",
+      "title": "Account Closure Policy",
+      "text": "Users may request account closure through support. Open investigations, unresolved balances, or compliance restrictions may delay closure. Support agents must not state that closure is immediate unless confirmed by back-office systems."
+    }
+  ]
+}

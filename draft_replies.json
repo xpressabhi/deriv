@@ -1,0 +1,94 @@
+[
+  {
+    "message_id": "M1",
+    "reply": "Thanks for submitting your ID. Identity verification reviews are typically completed within 1 to 3 business days, so timing depends on the review of your documents. I'm not able to guarantee approval or confirm a specific completion date, but if anything is rejected, you'll be asked to submit a clearer or valid document.",
+    "used_chunk_ids": [
+      "POL-002-c00"
+    ],
+    "policy_mode": "no_guarantees",
+    "gate_decision_id": "GATE-M1-8687fc8fc9",
+    "gate_created_at": "2026-10-19T10:48:34.818+00:00",
+    "retrieved_chunk_ids": [
+      "POL-002-c00",
+      "POL-001-c00",
+      "POL-003-c00"
+    ],
+    "generator": "llm",
+    "model": "deepseek-v4.1-flash",
+    "llm_call_id": "run-20261019T104834809+0000-66ddd9-llm-001",
+    "citation_source": "model",
+    "attempt": 1,
+    "insufficient_policy_support": false,
+    "fallback_reason": null,
+    "created_at": "2026-10-19T10:48:34.819+00:00"
+  },
+  {
+    "message_id": "M2",
+    "reply": "I understand this is important, and I'm sorry for the worry. Refund eligibility depends on your payment method, account status, and internal review, so I can't confirm right now that a refund will be issued or when it might arrive. Your case will be reviewed, and you may be asked for additional information.",
+    "used_chunk_ids": [
+      "POL-003-c00"
+    ],
+    "policy_mode": "no_guarantees",
+    "gate_decision_id": "GATE-M2-fb2fa56ebc",
+    "gate_created_at": "2026-10-19T10:48:34.818+00:00",
+    "retrieved_chunk_ids": [
+      "POL-003-c00",
+      "POL-004-c00",
+      "POL-001-c00"
+    ],
+    "generator": "llm",
+    "model": "deepseek-v4.1-flash",
+    "llm_call_id": "run-20261019T104834809+0000-66ddd9-llm-002",
+    "citation_source": "model",
+    "attempt": 1,
+    "insufficient_policy_support": false,
+    "fallback_reason": null,
+    "created_at": "2026-10-19T10:48:34.819+00:00"
+  },
+  {
+    "message_id": "M3",
+    "reply": "You can reset your password from the login page using the Forgot Password link. If the reset email isn't arriving, please check your spam folder and confirm that the email address on your account is the one you're checking. Note that support agents cannot view or set customer passwords, so the self-service reset is the way to go.",
+    "used_chunk_ids": [
+      "POL-001-c00"
+    ],
+    "policy_mode": "standard",
+    "gate_decision_id": "GATE-M3-15df4f3b5c",
+    "gate_created_at": "2026-10-19T10:48:34.818+00:00",
+    "retrieved_chunk_ids": [
+      "POL-001-c00",
+      "POL-003-c00",
+      "POL-002-c00"
+    ],
+    "generator": "llm",
+    "model": "deepseek-v4.1-flash",
+    "llm_call_id": "run-20261019T104834809+0000-66ddd9-llm-003",
+    "citation_source": "model",
+    "attempt": 1,
+    "insufficient_policy_support": false,
+    "fallback_reason": null,
+    "created_at": "2026-10-19T10:48:34.820+00:00"
+  },
+  {
+    "message_id": "M4",
+    "reply": "I understand you want your account closed today. You can request account closure through support, but open investigations, unresolved balances, or compliance restrictions may delay closure, and I can’t confirm that closure will be immediate or completed today. The timing would depend on back-office confirmation.",
+    "used_chunk_ids": [
+      "POL-004-c00"
+    ],
+    "policy_mode": "no_guarantees",
+    "gate_decision_id": "GATE-M4-34362cf659",
+    "gate_created_at": "2026-10-19T10:48:34.818+00:00",
+    "retrieved_chunk_ids": [
+      "POL-004-c00",
+      "POL-003-c00",
+      "POL-001-c00"
+    ],
+    "generator": "llm",
+    "model": "deepseek-v4.1-flash",
+    "llm_call_id": "run-20261019T104834809+0000-66ddd9-llm-004",
+    "citation_source": "model",
+    "attempt": 1,
+    "insufficient_policy_support": false,
+    "fallback_reason": null,
+    "created_at": "2026-10-19T10:48:34.820+00:00"
+  }
+]

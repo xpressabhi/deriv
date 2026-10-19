@@ -1,0 +1,34 @@
+[
+  {
+    "chunk_id": "POL-001-c00",
+    "doc_id": "POL-001",
+    "title": "Password Reset Policy",
+    "chunk_index": 0,
+    "text": "Users can reset their password from the login page using the Forgot Password link. Support agents cannot manually view or set customer passwords. If the user does not receive the reset email, they should check spam and confirm the registered email address.",
+    "content_hash": "df8b8c8bf9c806feb43a6a313a0109c6cb49ffd96eb30d09a6338fcaa6475552"
+  },
+  {
+    "chunk_id": "POL-002-c00",
+    "doc_id": "POL-002",
+    "title": "Verification Review Policy",
+    "chunk_index": 0,
+    "text": "Identity verification reviews are typically completed within 1 to 3 business days. Support agents must not guarantee approval. If documents are rejected, the user should be asked to submit a clearer or valid document based on the rejection reason.",
+    "content_hash": "54a8559f698cafb772a6f22ed6cd22dc7b21a4beac391adcd409b7a020ab2586"
+  },
+  {
+    "chunk_id": "POL-003-c00",
+    "doc_id": "POL-003",
+    "title": "Refund Policy",
+    "chunk_index": 0,
+    "text": "Refund eligibility depends on payment method, account status, and internal review. Support agents must not promise that a refund will be issued. They may explain that the case will be reviewed and that users may be asked for additional information.",
+    "content_hash": "83b2069b6315ed3bfdf88785db950a2636f48e79251adb7744de2fc3bd81687b"
+  },
+  {
+    "chunk_id": "POL-004-c00",
+    "doc_id": "POL-004",
+    "title": "Account Closure Policy",
+    "chunk_index": 0,
+    "text": "Users may request account closure through support. Open investigations, unresolved balances, or compliance restrictions may delay closure. Support agents must not state that closure is immediate unless confirmed by back-office systems.",
+    "content_hash": "8358cc8110e31aed75f77945b8b497d4e8fcfaf6e9872217b02d54fc125aa331"
+  }
+]

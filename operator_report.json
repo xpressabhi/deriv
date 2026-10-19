@@ -1,0 +1,26 @@
+{
+  "run_id": "run-20261019T104834809+0000-66ddd9",
+  "generated_at": "2026-10-19T10:48:34.828+00:00",
+  "message_count": 4,
+  "final_status_counts": {
+    "approved": 4
+  },
+  "policy_mode_counts": {
+    "no_guarantees": 3,
+    "standard": 1
+  },
+  "verification_issue_type_counts": {},
+  "issue_examples": {},
+  "fallback_reason_counts": {},
+  "weak_retrieval_count": 0,
+  "llm_status_counts": {
+    "cache_hit": 4
+  },
+  "draft_generator_counts": {
+    "llm": 4
+  },
+  "repair_action_counts": {},
+  "recommendations": [
+    "No verification failures were observed in this run."
+  ]
+}
