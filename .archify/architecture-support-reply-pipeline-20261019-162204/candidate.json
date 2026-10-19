@@ -1,0 +1,371 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "Grounded Support-Reply Pipeline",
+    "output": "docs/support-reply-pipeline.architecture.html",
+    "quality_profile": "showcase",
+    "locale": "en"
+  },
+  "components": [
+    {
+      "id": "operator",
+      "type": "external",
+      "label": "Support Operator",
+      "sublabel": "runs pipeline \u00b7 reviews drafts",
+      "pos": [
+        40,
+        140
+      ],
+      "size": [
+        150,
+        66
+      ]
+    },
+    {
+      "id": "inputs",
+      "type": "database",
+      "label": "Input Fixtures",
+      "sublabel": "policy_docs \u00b7 messages",
+      "tag": "disk",
+      "pos": [
+        260,
+        400
+      ],
+      "size": [
+        150,
+        66
+      ]
+    },
+    {
+      "id": "runner",
+      "type": "backend",
+      "label": "run.py Runner",
+      "sublabel": "stage order + artifacts",
+      "tag": "stdlib only",
+      "pos": [
+        260,
+        140
+      ],
+      "size": [
+        150,
+        66
+      ]
+    },
+    {
+      "id": "ingest",
+      "type": "backend",
+      "label": "Ingest & Chunk",
+      "sublabel": "sentences + content hashes",
+      "pos": [
+        480,
+        140
+      ],
+      "size": [
+        160,
+        66
+      ]
+    },
+    {
+      "id": "index",
+      "type": "database",
+      "label": "BM25 Index",
+      "sublabel": "index/ + token cache",
+      "tag": "content-hash reuse",
+      "pos": [
+        480,
+        400
+      ],
+      "size": [
+        160,
+        66
+      ]
+    },
+    {
+      "id": "retrieve",
+      "type": "backend",
+      "label": "Top-3 Retriever",
+      "sublabel": "scores + matched terms",
+      "pos": [
+        700,
+        140
+      ],
+      "size": [
+        150,
+        66
+      ]
+    },
+    {
+      "id": "gate",
+      "type": "security",
+      "label": "Deterministic Gate",
+      "sublabel": "policy mode, before drafting",
+      "tag": "no model calls",
+      "pos": [
+        930,
+        140
+      ],
+      "size": [
+        170,
+        66
+      ]
+    },
+    {
+      "id": "generate",
+      "type": "backend",
+      "label": "Draft Generator",
+      "sublabel": "LLM or extractive",
+      "tag": "grounded + cited",
+      "pos": [
+        880,
+        400
+      ],
+      "size": [
+        170,
+        66
+      ]
+    },
+    {
+      "id": "llm",
+      "type": "cloud",
+      "label": "OpenCode Go",
+      "sublabel": "deepseek-v4.1-flash",
+      "tag": "optional \u00b7 cached",
+      "pos": [
+        1100,
+        400
+      ],
+      "size": [
+        130,
+        66
+      ]
+    },
+    {
+      "id": "verify",
+      "type": "security",
+      "label": "Deterministic Verifier",
+      "sublabel": "grounding \u00b7 promises \u00b7 mode",
+      "tag": "separate stage",
+      "pos": [
+        990,
+        660
+      ],
+      "size": [
+        180,
+        66
+      ]
+    },
+    {
+      "id": "repair",
+      "type": "backend",
+      "label": "Repair / Fallback",
+      "sublabel": "stricter draft or safe reply",
+      "pos": [
+        740,
+        660
+      ],
+      "size": [
+        170,
+        66
+      ]
+    },
+    {
+      "id": "artifacts",
+      "type": "database",
+      "label": "Audit Artifacts",
+      "sublabel": "drafts \u00b7 verifications \u00b7 finals",
+      "tag": "JSON + JSONL",
+      "pos": [
+        480,
+        660
+      ],
+      "size": [
+        170,
+        66
+      ]
+    },
+    {
+      "id": "validate",
+      "type": "security",
+      "label": "validate.py",
+      "sublabel": "artifact + safety invariants",
+      "pos": [
+        260,
+        660
+      ],
+      "size": [
+        150,
+        66
+      ]
+    },
+    {
+      "id": "report",
+      "type": "frontend",
+      "label": "Operator Report",
+      "sublabel": "failures grouped by type",
+      "pos": [
+        40,
+        660
+      ],
+      "size": [
+        150,
+        66
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "id": "operator-runs",
+      "from": "operator",
+      "to": "runner",
+      "label": "runs",
+      "variant": "emphasis",
+      "fromSide": "right",
+      "toSide": "left"
+    },
+    {
+      "id": "inputs-feed",
+      "from": "inputs",
+      "to": "runner",
+      "label": "policy + messages",
+      "fromSide": "top",
+      "toSide": "bottom"
+    },
+    {
+      "id": "runner-ingest",
+      "from": "runner",
+      "to": "ingest",
+      "label": "ingest",
+      "fromSide": "right",
+      "toSide": "left"
+    },
+    {
+      "id": "ingest-index",
+      "from": "ingest",
+      "to": "index",
+      "label": "chunks + hashes",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "index-retrieve",
+      "from": "index",
+      "to": "retrieve",
+      "label": "term index",
+      "fromSide": "top",
+      "toSide": "bottom"
+    },
+    {
+      "id": "retrieve-gate",
+      "from": "retrieve",
+      "to": "gate",
+      "label": "top-3",
+      "variant": "emphasis",
+      "fromSide": "right",
+      "toSide": "left"
+    },
+    {
+      "id": "gate-generate",
+      "from": "gate",
+      "to": "generate",
+      "label": "policy mode",
+      "variant": "security",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "generate-llm",
+      "from": "generate",
+      "to": "llm",
+      "label": "chat",
+      "variant": "dashed",
+      "fromSide": "right",
+      "toSide": "left"
+    },
+    {
+      "id": "generate-verify",
+      "from": "generate",
+      "to": "verify",
+      "label": "draft",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "generate-artifacts",
+      "from": "generate",
+      "to": "artifacts",
+      "label": "drafts",
+      "variant": "dashed"
+    },
+    {
+      "id": "verify-repair",
+      "from": "verify",
+      "to": "repair",
+      "label": "issues",
+      "variant": "security",
+      "fromSide": "left",
+      "toSide": "right"
+    },
+    {
+      "id": "repair-artifacts",
+      "from": "repair",
+      "to": "artifacts",
+      "label": "finals",
+      "fromSide": "left",
+      "toSide": "right"
+    },
+    {
+      "id": "artifacts-validate",
+      "from": "artifacts",
+      "to": "validate",
+      "label": "checks",
+      "fromSide": "left",
+      "toSide": "right"
+    },
+    {
+      "id": "validate-report",
+      "from": "validate",
+      "to": "report",
+      "label": "report",
+      "fromSide": "left",
+      "toSide": "right"
+    },
+    {
+      "id": "report-operator",
+      "from": "report",
+      "to": "operator",
+      "label": "summary",
+      "fromSide": "top",
+      "toSide": "bottom"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "rose",
+      "title": "Deterministic safety",
+      "items": [
+        "The gate runs in code before any draft is generated",
+        "Verification is a separate deterministic stage",
+        "The model never decides whether a prohibited guarantee is allowed"
+      ]
+    },
+    {
+      "dot": "cyan",
+      "title": "Grounded generation",
+      "items": [
+        "Prompts contain only retrieved chunks plus the gate mode",
+        "The model returns reply and used_chunk_ids as JSON",
+        "An extractive generator covers offline and no-key runs"
+      ]
+    },
+    {
+      "dot": "emerald",
+      "title": "Auditable and replayable",
+      "items": [
+        "Every stage writes structured artifacts for review",
+        "llm_calls.jsonl logs prompt hashes, never prompts or keys",
+        "Content hashes reuse tokenization and rebuild only changed chunks"
+      ]
+    }
+  ]
+}

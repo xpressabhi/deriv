@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Grounded Support-Reply Pipeline — Diagrams</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #0b1020;
+      --panel: #121933;
+      --border: #26304f;
+      --text: #e8ecf8;
+      --muted: #9aa6c4;
+      --accent: #6ea8fe;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 15px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+    header {
+      padding: 40px 28px 18px;
+      max-width: 1240px;
+      margin: 0 auto;
+    }
+    h1 { margin: 0 0 8px; font-size: 28px; letter-spacing: -0.02em; }
+    p.lede { margin: 0 0 18px; color: var(--muted); max-width: 760px; }
+    .links { display: flex; flex-wrap: wrap; gap: 10px; }
+    .links a {
+      color: var(--accent);
+      text-decoration: none;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 6px 10px;
+      font-size: 13px;
+      background: var(--panel);
+    }
+    .links a:hover { border-color: var(--accent); }
+    main { max-width: 1240px; margin: 0 auto; padding: 12px 28px 48px; }
+    section { margin: 28px 0 44px; }
+    h2 { font-size: 19px; margin: 0 0 6px; }
+    .hint { color: var(--muted); margin: 0 0 12px; font-size: 13px; }
+    .frame {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+      background: #05070f;
+    }
+    iframe {
+      display: block;
+      width: 100%;
+      border: 0;
+      background: #05070f;
+    }
+    #architecture-frame { height: 880px; }
+    #workflow-frame { height: 1040px; }
+    footer { color: var(--muted); font-size: 12px; border-top: 1px solid var(--border); padding-top: 14px; }
+    code { background: var(--panel); border: 1px solid var(--border); border-radius: 4px; padding: 1px 5px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Grounded Support-Reply Pipeline</h1>
+    <p class="lede">
+      Diagrams for the deterministic, replayable support-reply pipeline. The architecture map shows the
+      components and how a request flows through retrieval, the safety gate, grounded generation, the
+      separate verifier, and repair or fallback. The workflow map shows the stage order and the gates that
+      make it safe.
+    </p>
+    <div class="links">
+      <a href="support-reply-pipeline.architecture.html">Open architecture diagram</a>
+      <a href="support-reply-pipeline.workflow.html">Open workflow diagram</a>
+      <a href="../SPEC.md">Specification</a>
+      <a href="../README.md">README</a>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <h2>Architecture</h2>
+      <p class="hint">
+        System overview: fixtures fan into chunking and a BM25 index; retrieval feeds the deterministic
+        gate before drafting; the LLM (or the extractive fallback) produces a cited draft; a separate
+        deterministic verifier approves it, sends it to repair, or triggers a documented safe fallback.
+      </p>
+      <div class="frame">
+        <iframe id="architecture-frame" src="support-reply-pipeline.architecture.html"
+                title="Grounded support-reply pipeline architecture diagram"></iframe>
+      </div>
+    </section>
+
+    <section>
+      <h2>Stage flow and gates</h2>
+      <p class="hint">
+        Workflow view: policy mode is chosen in code before generation, the verifier runs after
+        generation, failed drafts are repaired and re-verified or replaced by a safe fallback, and every
+        stage leaves auditable artifacts.
+      </p>
+      <div class="frame">
+        <iframe id="workflow-frame" src="support-reply-pipeline.workflow.html"
+                title="Support-reply pipeline workflow diagram"></iframe>
+      </div>
+    </section>
+
+    <footer>
+      Diagrams generated with Archify and verified by its validate, deliver, check, and browser gates.
+      Both HTML files are standalone and can be opened directly. Run <code>python run.py</code> to
+      regenerate the pipeline artifacts shown in the specification.
+    </footer>
+  </main>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "5e8e2dd8-13fa-4a1d-a586-711aca331c00",
+  "status": "current",
+  "command": "deliver",
+  "type": "workflow",
+  "input": "/Users/amaurya/Documents/GitHub/deriv/.archify/architecture-support-reply-pipeline-20261019-162204/workflow.candidate.json",
+  "output": "/Users/amaurya/Documents/GitHub/deriv/docs/support-reply-pipeline.workflow.html",
+  "specification": {
+    "sha256": "aa701cc514256bb82cf71b8fc634a56d9c7427ee467b22af41a1fe60577c2cb5",
+    "bytes": 4435
+  },
+  "artifact": {
+    "sha256": "be4ee9d71c3a076444dded43e03552160be280f4b12e9e6272ce799066abccea",
+    "bytes": 827319
+  }
+}

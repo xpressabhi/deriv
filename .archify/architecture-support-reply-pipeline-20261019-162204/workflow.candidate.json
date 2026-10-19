@@ -1,0 +1,76 @@
+{
+  "schema_version": 2,
+  "diagram_type": "workflow",
+  "meta": {
+    "title": "Support-Reply Pipeline Stage Flow",
+    "output": "docs/support-reply-pipeline.workflow.html",
+    "quality_profile": "showcase",
+    "locale": "en"
+  },
+  "lanes": [
+    { "id": "intake", "label": "Intake & Retrieval" },
+    { "id": "control", "label": "Deterministic Control" },
+    { "id": "drafting", "label": "Drafting" },
+    { "id": "safety", "label": "Verification & Repair" },
+    { "id": "output", "label": "Audit & Delivery" }
+  ],
+  "phases": [
+    { "id": "retrieve_phase", "label": "Retrieve policy", "fromCol": 0, "toCol": 1 },
+    { "id": "gate_phase", "label": "Gate before drafting", "fromCol": 2, "toCol": 2, "variant": "security" },
+    { "id": "draft_phase", "label": "Generate", "fromCol": 3, "toCol": 3, "variant": "emphasis" },
+    { "id": "verify_phase", "label": "Verify and repair", "fromCol": 4, "toCol": 5 }
+  ],
+  "mainPath": ["message", "retrieve", "gate", "generate", "verify", "final"],
+  "nodes": [
+    { "id": "message", "lane": "intake", "col": 0, "type": "external", "label": "Customer Message", "sublabel": "fixture on disk" },
+    { "id": "retrieve", "lane": "intake", "col": 1, "type": "backend", "label": "Top-3 Retrieval", "sublabel": "BM25 scores + audit" },
+    { "id": "gate", "lane": "control", "col": 2, "type": "security", "label": "Risk Gate", "sublabel": "policy mode", "tag": "runs first" },
+    { "id": "generate", "lane": "drafting", "col": 3, "type": "backend", "label": "Draft Generation", "sublabel": "LLM or extractive" },
+    { "id": "verify", "lane": "safety", "col": 4, "type": "security", "label": "Compliance Verify", "sublabel": "grounding + promises" },
+    { "id": "repair", "lane": "safety", "col": 5, "type": "backend", "label": "Repair / Fallback", "sublabel": "issues list or safe reply" },
+    { "id": "final", "lane": "output", "col": 5, "type": "backend", "label": "Final Response", "sublabel": "approved or fallback" },
+    { "id": "artifacts", "lane": "output", "col": 4, "type": "database", "label": "Audit Artifacts", "sublabel": "drafts · results · finals" },
+    { "id": "validate", "lane": "control", "col": 5, "type": "security", "label": "validate.py", "sublabel": "artifact invariants" },
+    { "id": "report", "lane": "output", "col": 0, "type": "frontend", "label": "Operator Report", "sublabel": "failures by type" }
+  ],
+  "edges": [
+    { "id": "message-retrieve", "from": "message", "to": "retrieve", "variant": "default" },
+    { "id": "retrieve-gate", "from": "retrieve", "to": "gate", "label": "top-3 chunks", "variant": "emphasis" },
+    { "id": "gate-generate", "from": "gate", "to": "generate", "label": "policy mode", "variant": "security" },
+    { "id": "generate-verify", "from": "generate", "to": "verify", "label": "draft", "variant": "emphasis" },
+    { "id": "verify-repair", "from": "verify", "to": "repair", "label": "issues", "variant": "security", "role": "branch" },
+    { "id": "repair-reverify", "from": "repair", "to": "verify", "label": "re-verify", "variant": "dashed", "role": "return" },
+    { "id": "verify-final", "from": "verify", "to": "final", "label": "approved" },
+    { "id": "repair-final", "from": "repair", "to": "final", "label": "repaired or fallback", "variant": "dashed" },
+    { "id": "verify-artifacts", "from": "verify", "to": "artifacts", "label": "results", "variant": "dashed", "role": "async" },
+    { "id": "repair-artifacts", "from": "repair", "to": "artifacts", "label": "finals", "variant": "dashed", "role": "async" },
+    { "id": "final-validate", "from": "final", "to": "validate", "label": "check" },
+    { "id": "validate-report", "from": "validate", "to": "report", "label": "summary" }
+  ],
+  "cards": [
+    {
+      "dot": "rose",
+      "title": "Gate first",
+      "items": [
+        "Policy mode is chosen in code before any drafting",
+        "Generation cannot start without a matching gate decision"
+      ]
+    },
+    {
+      "dot": "cyan",
+      "title": "Verify separately",
+      "items": [
+        "A deterministic verifier checks grounding, promises, and mode",
+        "A failed draft is repaired and verified again, or replaced by a safe fallback"
+      ]
+    },
+    {
+      "dot": "emerald",
+      "title": "Traceable output",
+      "items": [
+        "Final replies cite their retrieved chunk IDs",
+        "Every safe fallback records its reason and verification state"
+      ]
+    }
+  ]
+}
